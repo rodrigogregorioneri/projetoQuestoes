@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+    <persistence-unit name="app" transaction-type="RESOURCE_LOCAL">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <jta-data-source>java:comp/env/jdbc/main</jta-data-source>
+        <class>app.entity.Ramo</class>
+        <class>app.entity.UserRole</class>
+        <class>app.entity.Respostas</class>
+        <class>app.entity.PerguntaRespostas</class>
+        <class>app.entity.User</class>
+        <class>app.entity.OpcaoPerguntas</class>
+        <class>app.entity.Componente</class>
+        <class>app.entity.Tecnologias</class>
+        <class>app.entity.Pergunta</class>
+        <class>app.entity.Estados</class>
+        <class>app.entity.Territorio</class>
+        <class>app.entity.Cidades</class>
+        <class>app.entity.Pesquisa</class>
+        <class>app.entity.Empresa</class>
+        <class>app.entity.Role</class>
+        <class>app.entity.Cargo</class>
+        <class>app.entity.RespostasOpcaoPerguntas</class>
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:h2:file:~/NovoModelo;AUTO_SERVER=TRUE;DATABASE_TO_UPPER=FALSE;ALIAS_COLUMN_NAME=TRUE"/>
+            <property name="javax.persistence.jdbc.user" value="root"/>
+            <property name="javax.persistence.jdbc.password" value="roor"/>
+            <property name="eclipselink.ddl-generation" value="create-or-extend-tables"/>
+        </properties>
+    </persistence-unit>
+</persistence>
