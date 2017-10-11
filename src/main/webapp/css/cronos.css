@@ -278,3 +278,9 @@ div[data-component="crn-button"] {
 .radio label input[type="radio"]:disabled + .cr {
     opacity: .5;
 }
+
+
+.scrolll{
+ overflow:auto !important; 
+ height: 800px !important;
+}

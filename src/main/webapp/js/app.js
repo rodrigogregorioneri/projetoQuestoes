@@ -173,7 +173,7 @@ var app = (function() {
 								$scope.salvaPesquisa = function(perguntas) {
 									var profissional = $rootScope.Profissionais.data[0]
 									var idUsuarioLogado = $rootScope.session.user.login;
-
+                  var objectUser = $rootScope.session.user;
 									valores = $rootScope.Pergunta.data;
 									myobject = {};
 									for (i = 0; i < valores.length; i++) {
@@ -182,7 +182,8 @@ var app = (function() {
 											myobject = {
 												'respostaCorreta' : valores[i].resposta,
 												'profissionais' : profissional,
-												'idUserLogado' : idUsuarioLogado
+												'idUserLogado' : idUsuarioLogado,
+												'user': objectUser
 											}
 											$http(
 													{
@@ -203,13 +204,14 @@ var app = (function() {
 											opcoes = $rootScope.OpcaoPerguntas.data;
 											console.log(opcoes);
 											for (j = 0; j < opcoes.length; j++) {
-
+                        
 												if (opcoes[j].id === "true"
 														&& opcoes[j].pergunta.perguntas === valores[i].perguntas) {
 													myobject = {
 														'respostaCorreta' : opcoes[j].opcao,
 														'profissionais' : profissional,
 														'idUserLogado' : idUsuarioLogado,
+														'user': objectUser,
 														'pergunta' : opcoes[j].pergunta.perguntas
 													}
 													$http(
