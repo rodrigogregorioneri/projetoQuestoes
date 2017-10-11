@@ -3,11 +3,11 @@
     <persistence-unit name="app" transaction-type="RESOURCE_LOCAL">
         <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
         <jta-data-source>java:comp/env/jdbc/main</jta-data-source>
+        <class>app.entity.User</class>
         <class>app.entity.Ramo</class>
         <class>app.entity.UserRole</class>
         <class>app.entity.Respostas</class>
         <class>app.entity.PerguntaRespostas</class>
-        <class>app.entity.User</class>
         <class>app.entity.OpcaoPerguntas</class>
         <class>app.entity.Componente</class>
         <class>app.entity.Tecnologias</class>

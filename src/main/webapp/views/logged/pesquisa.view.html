@@ -61,18 +61,12 @@
         <button class="btn btn-success" ng-click="datasource.post()"><i class="glyphicon glyphicon-ok"></i></button>
         <button class="btn btn-danger" ng-click="datasource.cancel()"><i class="glyphicon glyphicon-remove"></i></button>
       </div>
-      <br/>
+      <br>
       <fieldset ng-disabled="!datasource.editing &amp;&amp; !datasource.inserting">
         <div data-component="crn-textinput" id="crn-textinput-nome_pesquisa">
-          <div class="form-group">
+          <div class="form-group  col-sm-4">
             <label for="textinput-nome_pesquisa" class="">Nome _pesquisa</label>
-            <input
-              type="text"
-              ng-model="Pesquisa.active.nome_pesquisa"
-              class="form-control"
-              id="textinput-nome_pesquisa"
-              placeholder="Nome _pesquisa"
-              >
+            <input type="text" ng-model="Pesquisa.active.nome_pesquisa" class="form-control" id="textinput-nome_pesquisa" placeholder="Nome _pesquisa">
           </div>
         </div>
         <!-- NtoN  -->

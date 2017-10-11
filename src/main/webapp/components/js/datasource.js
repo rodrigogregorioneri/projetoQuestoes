@@ -157,7 +157,7 @@ angular.module('datasourcejs', [])
            * Error Handler function
            */
           this.handleError = function(data) {
-            console.log(data);
+       
 
             var error = "";
 
