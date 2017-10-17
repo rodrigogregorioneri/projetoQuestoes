@@ -7,6 +7,12 @@
 </div>
 <div class="component-holder" data-component="crn-grid" id="crn-grid-Respostas">
   <div crn-datasource="Respostas" class="scrolll" ng-hide="Respostas.editing || Respostas.inserting">
+        <div data-component="crn-textinput" id="crn-textinput-idUserLogado">
+          <div class="form-group col-sm-4">
+            <label for="textinput-idUserLogado" class="">Pesquisa</label>
+            <input type="text" ng-model="search" class="form-control" id="textinput-idUserLogado" placeholder="Digite um parametro de pesquisa">
+          </div>
+        </div>      
     <table class="table  table-bordered table-hover table-striped ">
       <thead>
         <tr class="table-header">
@@ -31,7 +37,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr class="table-content" ng-repeat="rowData in datasource.data">
+        <tr class="table-content" ng-repeat="rowData in datasource.data | filter:search">
           <td class="">
             <div class="">
               {{rowData.id}}

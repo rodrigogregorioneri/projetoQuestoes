@@ -21,10 +21,10 @@
         <class>app.entity.Cargo</class>
         <class>app.entity.RespostasOpcaoPerguntas</class>
         <properties>
-            <property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>
-            <property name="javax.persistence.jdbc.url" value="jdbc:h2:file:~/NovoModelo;AUTO_SERVER=TRUE;DATABASE_TO_UPPER=FALSE;ALIAS_COLUMN_NAME=TRUE"/>
-            <property name="javax.persistence.jdbc.user" value="root"/>
-            <property name="javax.persistence.jdbc.password" value="roor"/>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://rds-oncronos-shared.cx8gelec2ybx.us-east-1.rds.amazonaws.com:3306/42317dbe-3d40-4b1c-b427-1d4578624f3d"/>
+            <property name="javax.persistence.jdbc.user" value="42317qor3q404o1p"/>
+            <property name="javax.persistence.jdbc.password" value="po4271q4578624s3"/>
             <property name="eclipselink.ddl-generation" value="create-or-extend-tables"/>
         </properties>
     </persistence-unit>
